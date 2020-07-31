@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  int size;
+  cout << "Enter size: ";
+  cin >> size;
+  cout << endl;
+
+  if (size < 0) {
+    cout << "Invalid size." << endl;
+    // FIXME: stop the program if the size was invalid
+  }
+
+  // FIXME: print a right triangle of the requested size
+
+  return 0;
+}
