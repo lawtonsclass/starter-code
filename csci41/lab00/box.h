@@ -12,7 +12,7 @@ class Box {
   int getWidth() const;
   // gets the current box-drawing character
   char getBoxChar() const;
-  // returns the current box-drawing character
+  // sets the current box-drawing character
   void setBoxChar(char newChar);
 
   // increases the current width by offset
