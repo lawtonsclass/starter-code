@@ -14,7 +14,7 @@ int main() {
   // we're living in an alternate universe where there's no pennies or nickels,
   // so everything is rounded to the nearest 10 cents
   // 7.75% tax, *rounded to the nearest dime*
-  // remind me 3 days before this is due and I'll give you a hint
+  // come to office hours and I'll give you a hint
 
   // FIXME: print the following on separate lines
   //        (all #s rounded to the nearest 2 decimal places):
