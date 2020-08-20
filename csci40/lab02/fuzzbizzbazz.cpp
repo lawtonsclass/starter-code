@@ -15,6 +15,10 @@ int main() {
   // if divisible by 2 and 5, print "fuzzbazz"
   // if divisible by 3 and 5, print "bizzbazz"
   // if divisible by 2 and 3 and 5, print "fuzzbizzbazz"
+  // print the number otherwise
+
+  // there's a trick that only involves 4 if statements--
+  // ask me about it if you're interested
 
   return 0;
 }

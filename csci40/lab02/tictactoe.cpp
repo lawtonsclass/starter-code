@@ -3,7 +3,7 @@
 using namespace std;
 
 int main() {
-  cout << "Enter the board, (left to right, top to bottom): ";
+  cout << "Enter the board (left to right, top to bottom): ";
 
   // FIXME: get 9 characters from the user. Each char will be separated by any 
   // kind of whitespace (e.g., spaces, tabs, newlines) and will represent the
