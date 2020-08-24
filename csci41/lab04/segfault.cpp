@@ -1,6 +1,6 @@
 // There are two errors for you to discover with GDB
 // You won't turn this file in
-// Fix the first error to discover the second
+// Remove the first error to discover the second
 
 int main(int argc, char* argv[]) {
   int *i = new int;
