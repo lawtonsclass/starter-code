@@ -12,7 +12,8 @@ int main() {
     // FIXME: stop the program if the size was invalid
   }
 
-  // FIXME: print a right triangle of the requested size
+  // FIXME: print a (right-leaning) right triangle of the requested size
+  // Hint: what is the value of (total spaces) + (total stars) on each line?
 
   return 0;
 }
