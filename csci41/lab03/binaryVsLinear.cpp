@@ -5,14 +5,14 @@ using namespace std;
 // uses linear to search for the key in the vector v
 // returns -1 if not found
 int linearSearch(const vector<int>& v, int key) {
-  // FIXME
+  // FIXME: implement this function
   return -1;
 }
 
 // uses binary search to search for the key in the vector v
 // returns -1 if not found
 int binarySearch(const vector<int>& v, int key) {
-  // FIXME
+  // FIXME: implement this function
   return -1;
 }
 
