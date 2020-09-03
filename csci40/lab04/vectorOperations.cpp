@@ -15,8 +15,8 @@ int main(int argc, char *argv[]) {
   // FIXME: read all of the command line arguments (not including the program name) 
   // into the vector v
 
-  // The following FIXMEs tell you to print something. Please print each thing on its own line,
-  // followed by a newline:
+  // The following FIXMEs tell you to print something. Please print each thing using the 
+  // style from the write-up.
   // FIXME: find the min element and print it 
   // FIXME: find the max element and print it
   // FIXME: find the index of the minimum element and print it
