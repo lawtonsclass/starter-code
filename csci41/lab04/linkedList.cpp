@@ -5,9 +5,9 @@ LinkedList::LinkedList() {
   // make list initially empty
 }
 
-// FIXME: implement LinkedList's getFirst method
+// FIXME: implement LinkedList's getFirst method to get the first element
 
-// FIXME: implement LinkedList's getLast method
+// FIXME: implement LinkedList's getLast method to get the last element
 
 void LinkedList::push_front(Point2D data) {
   // FIXME: implement this method to add a new Node at the front of the list

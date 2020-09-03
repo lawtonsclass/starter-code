@@ -10,7 +10,6 @@ struct Node {
 
 class LinkedList {
 public:
-
   LinkedList();
   ~LinkedList();
   LinkedList& operator=(const LinkedList& other);
@@ -26,7 +25,6 @@ public:
   int size();
 
 private:
-
   Node* first;
   Node* last;
 };
