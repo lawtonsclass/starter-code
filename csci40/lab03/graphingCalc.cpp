@@ -24,8 +24,8 @@ int main() {
 
       // FIXME: if we don't hit a point on the graph, print either the axis line
       // or a space
-      //   - if y = 0, print a vertical axis line here ('|')
-      //   - if x = 0, print a horizontal axis line here ('-')
+      //   - if x = 0, print a vertical axis line here ('|')
+      //   - if y = 0, print a horizontal axis line here ('-')
       //   - if x = 0 and y = 0, print the axes crossing ('+')
       //   - if none of the above are true, print a single blank space (' ')
     }
