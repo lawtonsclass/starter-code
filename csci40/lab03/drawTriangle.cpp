@@ -10,6 +10,7 @@ int main() {
   if (size < 0) {
     cout << "Invalid size." << endl;
     // FIXME: stop the program if the size was invalid
+    // you should exit with a return code of 1
   }
 
   // FIXME: print a (right-leaning) right triangle of the requested size
