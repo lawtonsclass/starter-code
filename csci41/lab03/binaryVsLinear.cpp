@@ -3,6 +3,7 @@
 using namespace std;
 
 // uses linear to search for the key in the vector v
+// returns the index of the key, if you find it
 // returns -1 if not found
 int linearSearch(const vector<int>& v, int key) {
   // FIXME: implement this function
@@ -10,6 +11,7 @@ int linearSearch(const vector<int>& v, int key) {
 }
 
 // uses binary search to search for the key in the vector v
+// returns the index of the key, if you find it
 // returns -1 if not found
 int binarySearch(const vector<int>& v, int key) {
   // FIXME: implement this function
