@@ -6,6 +6,25 @@
 using namespace std;
 
 /*
+Calculates the greatest common divisor of a and b using Euclid's algorithm.
+
+We need this function to use in our rationalSimplify function.
+
+This is a function our user doesn't get to see/know about, so we 
+won't put it in the .h file.
+*/
+int GCD(int a, int b) {
+  while (b != 0) {
+    int newA = b;
+    int newB = a % b;
+    a = newA;
+    b = newB;
+  }
+
+  return a;
+}
+
+/*
 If the number is negative, the numer should become negative (*not* the denom).
 */
 void rationalSimplify(int& numer, int& denom) {
@@ -44,34 +63,13 @@ void rationalTimes(int numer1, int denom1, int numer2, int denom2, int& resultNu
 }
 
 /*
-Calculates the greatest common divisor of a and b using Euclid's algorithm.
-
-We need this function to use in our rationalSimplify function.
-
-This is a function our user doesn't get to see/know about, so we 
-won't put it in the .h file.
-*/
-int GCD(int a, int b) {
-  while (b != 0) {
-    int newA = b;
-    int newB = a % b;
-    a = newA;
-    b = newB;
-  }
-
-  return a;
-}
-
-/*
 Return a pretty string version of a given rational number.
 Use the to_string function in <string> to convert an int
 to a string (so you can use the string's + operator.)
 
 For example, if numer = 2 and denom = -44 (i.e., -1/22),
-The final output to cout should be exactly:
--1 / 22
-If numer = 2 and denom = 4, the final output should be:
-1 / 2
+The final string you return should be exactly "-1 / 22"
+If numer = 2 and denom = 4, the final string should be "1 / 2"
 */
 string rationalPrettyString(int numer, int denom) {
   // FIXME: call simplify before converting/printing
