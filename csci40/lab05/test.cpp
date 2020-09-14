@@ -35,7 +35,7 @@ void testSimplify1() {
 void testTimes1() {
   int numer1 = 2, denom1 = -44;
   int numer2 = -3, denom2 = 6;
-  int numerResult, denomResult;
+  int numerResult, denomResult; // the rationalTimes function will set these vars
   rationalTimes(numer1, denom1, numer2, denom2, numerResult, denomResult);
   assertTrue(numerResult == 1 && denomResult == 44, "2/-44 * -3/6");
 }

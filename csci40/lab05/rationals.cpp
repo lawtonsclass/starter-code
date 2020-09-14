@@ -53,7 +53,7 @@ void rationalSimplify(int& numer, int& denom) {
   // them without needing to return anything.
 }
 
-// Multiplies two rational numbers
+// Multiplies two rational numbers, putting the result in resultNumer and resultDenom
 void rationalTimes(int numer1, int denom1, int numer2, int denom2, int& resultNumer, int& resultDenom) {
   // FIXME: implement this function
 
