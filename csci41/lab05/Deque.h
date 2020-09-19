@@ -12,8 +12,8 @@ public:
   void push_back(const T& item);
   void pop_front();
   void pop_back();
-  T& peek_front();
-  T& peek_back();
+  T& peek_front(); // gets the front element
+  T& peek_back();  // gets the back element
   bool empty() const;
   int size() const;
 private:

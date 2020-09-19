@@ -10,7 +10,9 @@ class Stack {
 public:
   void push(const T& item);
   T pop();
-  T& peek();
+  // "peek" means "top"--I think it's a silly name, but we might as well 
+  // be consistent with your textbook
+  T& peek(); 
   bool empty() const;
   int size() const;
 private:
