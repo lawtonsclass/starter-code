@@ -9,6 +9,7 @@ template <class T>
 class Stack {
 public:
   void push(const T& item);
+  // for pop, you will also return a copy of the value you pop
   T pop();
   // "peek" means "top"--I think it's a silly name, but we might as well 
   // be consistent with your textbook
