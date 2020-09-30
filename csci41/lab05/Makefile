@@ -9,10 +9,10 @@ all: $(BINARIES)
 	$(CXX) $(CXXFLAGS) -c $^
 
 testDeque: testDeque.o testing.o Deque.h
-	$(CXX) $(CXXFLAGS) $^ -o $@
+	$(CXX) $(CXXFLAGS) testDeque.o testing.o -o $@
 
 testStack: testStack.o testing.o Deque.h Stack.h
-	$(CXX) $(CXXFLAGS) $^ -o $@
+	$(CXX) $(CXXFLAGS) testStack.o testing.o -o $@
 
 clean:
 	rm -f $(BINARIES) *.o
