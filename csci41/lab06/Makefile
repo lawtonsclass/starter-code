@@ -1,7 +1,7 @@
 CXX=g++
 CXXFLAGS=-std=c++17 -g
 
-BINARIES=hashTableTests autocomplete
+BINARIES=hashTableTests
 
 all: $(BINARIES)
 
