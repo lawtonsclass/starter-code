@@ -2,6 +2,8 @@
 #include <queue> // where will you use this?
 using namespace std;
 
+// You must use recursion for every function except for breadthFirst
+
 // FIXME: implement the evaluation function to perform the operations
 //        represented by the expression tree
 int evaluate(ExpressionNode *root) {
@@ -25,6 +27,7 @@ std::string inOrder(ExpressionNode* root) {
   return "";
 }
 
+// THIS IS THE ONLY NON-RECURSIVE FUNCTION
 // FIXME: implement breadth-first order traversal for expression trees, with the same output style as preOrder
 std::string breadthFirst(ExpressionNode* root) {
   return "";
