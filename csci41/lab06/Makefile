@@ -5,11 +5,14 @@ BINARIES=hashTableTests
 
 all: $(BINARIES)
 
-%.o : %.cpp
+testing.o : testing.cpp
 	$(CXX) $(CXXFLAGS) -c $^
 
-hashTableTests: hashTableTests.o testing.o hashTable.h
-	$(CXX) $(CXXFLAGS) hashTableTests.o testing.o -o $@
+hashTableTests.o: hashTableTests.cpp hashTable.h
+	$(CXX) $(CXXFLAGS) -c hashTableTests.cpp
+
+hashTableTests: hashTableTests.o testing.o
+	$(CXX) $(CXXFLAGS) $^ -o $@
 
 clean:
 	rm -f $(BINARIES) *.o
