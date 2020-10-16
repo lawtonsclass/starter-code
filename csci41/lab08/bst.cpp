@@ -77,7 +77,7 @@ void BST::releasePokemon(int key) {
 // FIXME: Implement this method
 // deletes a given node from the tree--remember to implement every case!
 void BST::remove(BSTNode* n) {
-  // case 1: node is a leaf; just delete it
+  // case 1: node is a leaf; just delete it and make the parent forget
 
   // case 2: node has one child; replace the parent's child with that one
 
