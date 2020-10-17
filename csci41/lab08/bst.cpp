@@ -117,13 +117,15 @@ std::string BST::toGraphviz() const {
     stringstream ss;
     ss << n;
     string nodeName = "n" + ss.str();
-    string rootInfo = "";  // mark which is the root
+    string nodeInfo = "";  // mark which is the root
     if (n == root) {
-      rootInfo = "\\n(root)";
+      nodeInfo = "\\n(root)";
+    } else if (n->parent != nullptr) {
+      nodeInfo = "\\n(parent is " + to_string(n->parent->key) + ")";
     }
 
     nodeDefinitions.push_back(nodeName + " [ label = \"" + to_string(n->key) +
-                              ": " + n->data.name + rootInfo + "\" ];");
+                              ": " + n->data.name + nodeInfo + "\" ];");
   }
 
   vector<string> edges;
