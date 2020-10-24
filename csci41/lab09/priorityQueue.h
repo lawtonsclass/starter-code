@@ -43,7 +43,7 @@ int PriorityQueue<T>::parentIndex(int index) const {
 // FIXME: implement the push method to add a new node into the heap
 
 // FIXME: implement the remove method
-// Remove the max element, and also return a copy of it
+// Remove the min element, and also return a copy of it
 template <class T>
 T PriorityQueue<T>::pop() {
   // replace the root with the bottommost, rightmost node
@@ -56,14 +56,14 @@ T PriorityQueue<T>::pop() {
   // return a copy of the value you removed
 }
 
-// FIXME: implement the peek method to return a reference to the current max
+// FIXME: implement the peek method to return a reference to the current min
 
 // FIXME: implement the isEmpty method to return whether the heap is empty
 
 // FIXME: implement the getLength method to get the size of the heap
 
 // The following is not a method--you'll *use* the PriorityQueue class
-// FIXME: sort the input vector (from biggest to smallest) using a
+// FIXME: sort the input vector (from smallest to biggest) using a
 // PriorityQueue<T>
 template <class T>
 std::vector<T> heapSort(const std::vector<T>& v) {
