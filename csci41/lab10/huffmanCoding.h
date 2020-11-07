@@ -71,6 +71,8 @@ public:
   // HTreeNodes will be made on the heap. You have to delete your children.
 
 private:
+  // the left and right children will be made on the heap, so we need
+  // to delete them in the destructor
   HTreeNode* left;
   HTreeNode* right;
 };
@@ -78,6 +80,7 @@ private:
 // This HuffmanCoding class packages up all the operations from the textbook.
 class HuffmanCoding {
 public:
+  // constructor takes the file that we want to compress
   HuffmanCoding(std::ifstream& ifs);
   ~HuffmanCoding();
   std::map<char, std::string> getCodes();

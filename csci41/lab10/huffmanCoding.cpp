@@ -1,5 +1,5 @@
 #include "huffmanCoding.h"
-#include <queue>
+#include <queue> // for priority_queue
 using namespace std;
 
 // Pure virtual destructors are required to have an implementation
@@ -8,6 +8,8 @@ using namespace std;
 // but it's more hip to do it this way.
 HTreeNode::~HTreeNode() = default;
 
+// Eventually, we're going to put HTreeNode*s inside a priority_queue,
+// so we need to tell the pq how to compare those pointers.
 // We want to prefer HTreeNodes with smaller frequencies, so 
 // we'll use the following custom comparison class.
 class CompareHTreeNodePointer {
