@@ -1,20 +1,20 @@
-#ifndef HASHTABLE_H
-#define HASHTABLE_H
+#ifndef HASHMAP_H
+#define HASHMAP_H
 
 #include <vector>
 #include <list>
 #include <string>
 #include <functional>
 
-// The HashTable class maps keys of type K to values of type V.
+// The HashMap class maps keys of type K to values of type V.
 // Precondition: The function:
 //   unsigned int Hash(const K& k);
 // exists for the type K. We will use that function to figure out
 // which bucket to put the key k into.
 template <class K, class V>
-class HashTable {
+class HashMap {
 public:
-  HashTable(int tableSize);
+  HashMap(int tableSize);
   void insert(const K& key, const V& val);
   V* search(const K& key);
 
@@ -60,7 +60,7 @@ unsigned int Hash(const int& i) {
   // vector to have size tableSize.
   // Hint: you can call one of vector's constructors to do this
 template <class K, class V>
-HashTable<K, V>::HashTable(int tableSize) {}
+HashMap<K, V>::HashMap(int tableSize) {}
 
 
 
@@ -79,4 +79,4 @@ HashTable<K, V>::HashTable(int tableSize) {}
   // return a pointer to the value for a given key, or nullptr if the key doesn't exist
 
 
-#endif /* HASHTABLE_H */
+#endif /* HASHMAP_H */

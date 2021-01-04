@@ -15,7 +15,7 @@ segfault: segfault.o
 linkedListTests.o: linkedListTests.cpp
 	$(CXX) $(CXXFLAGS) -c $^
 
-linkedList.o: linkedList.cpp
+list.o: list.cpp
 	$(CXX) $(CXXFLAGS) -c $^
 
 point2D.o: point2D.cpp
@@ -27,10 +27,10 @@ testing.o: testing.cpp
 snake.o: snake.cpp
 	$(CXX) $(CXXFLAGS) -c $^
 
-linkedListTests: linkedListTests.o linkedList.o point2D.o testing.o
+linkedListTests: linkedListTests.o list.o point2D.o testing.o
 	$(CXX) $(CXXFLAGS) $^ -o $@
 
-snake: snake.o point2D.o linkedList.o
+snake: snake.o point2D.o list.o
 	$(CXX) $(CXXFLAGS) $^ -o $@
 
 clean:

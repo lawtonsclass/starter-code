@@ -9,7 +9,7 @@
 #include <sys/ioctl.h>
 #include <termios.h>
 #include <unistd.h>
-#include "linkedList.h"
+#include "list.h"
 #include "point2D.h"
 using namespace std;
 
@@ -27,7 +27,7 @@ private:
   void drawGrid();
 
   char grid[80][24];
-  LinkedList snakeBody;
+  List snakeBody;
   Point2D snakeDirection;
   Point2D snakeFoodLocation;
 };

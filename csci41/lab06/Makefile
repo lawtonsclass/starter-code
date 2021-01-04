@@ -1,17 +1,17 @@
 CXX=g++
 CXXFLAGS=-std=c++17 -g
 
-BINARIES=hashTableTests
+BINARIES=hashMapTests
 
 all: $(BINARIES)
 
 testing.o : testing.cpp
 	$(CXX) $(CXXFLAGS) -c $^
 
-hashTableTests.o: hashTableTests.cpp hashTable.h
-	$(CXX) $(CXXFLAGS) -c hashTableTests.cpp
+hashMapTests.o: hashMapTests.cpp hashMap.h
+	$(CXX) $(CXXFLAGS) -c hashMapTests.cpp
 
-hashTableTests: hashTableTests.o testing.o
+hashMapTests: hashMapTests.o testing.o
 	$(CXX) $(CXXFLAGS) $^ -o $@
 
 clean:

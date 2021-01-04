@@ -1,5 +1,5 @@
-#ifndef LINKEDLIST_H
-#define LINKEDLIST_H
+#ifndef LIST_H
+#define LIST_H
 
 #include "point2D.h"
 
@@ -8,12 +8,12 @@ struct Node {
   Node* next;
 };
 
-class LinkedList {
+class List {
 public:
-  LinkedList();
-  ~LinkedList();
-  LinkedList& operator=(const LinkedList& other);
-  LinkedList(const LinkedList& other);
+  List();
+  ~List();
+  List& operator=(const List& other);
+  List(const List& other);
 
   const Node* getFirst();
   const Node* getLast();
@@ -29,4 +29,4 @@ private:
   Node* last;
 };
 
-#endif /* LINKEDLIST_H */
+#endif /* LIST_H */

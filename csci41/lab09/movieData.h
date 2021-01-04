@@ -9,6 +9,8 @@ public:
   MovieData(std::string name, int year, double rating);
   bool operator<(const MovieData& other) const;
   bool operator>(const MovieData& other) const { return other < *this; }
+  bool operator<=(const MovieData& other) const { return !(*this > other); }
+  bool operator>=(const MovieData& other) const { return !(*this < other); }
   bool operator==(const MovieData& other) const;
   std::string getName() const;
   int getYear() const;

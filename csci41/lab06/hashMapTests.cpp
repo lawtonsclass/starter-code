@@ -1,22 +1,22 @@
 #include <string>
 #include "testing.h"
-#include "hashTable.h"
+#include "hashMap.h"
 using namespace std;
 
-void hashTableTest1();
-void hashTableTest2();
+void hashMapTest1();
+void hashMapTest2();
 
 int main() {
-  hashTableTest1();
-  hashTableTest2();
+  hashMapTest1();
+  hashMapTest2();
 
   // FIXME: add two more tests
 
   return 0;
 }
 
-void hashTableTest1() {
-  HashTable<int, double> table(5);
+void hashMapTest1() {
+  HashMap<int, double> table(5);
   bool is_correct = true;
 
   table.insert(5, 3.14);
@@ -25,15 +25,15 @@ void hashTableTest1() {
   if (table.search(6) == nullptr || *table.search(6) != 5.67) is_correct = false;
   if (table.search(10) != nullptr) is_correct = false;
 
-  assertTrue(is_correct, "HashTable<int, double> test");
+  assertTrue(is_correct, "HashMap<int, double> test");
 }
 
-void hashTableTest2() {
+void hashMapTest2() {
   // make sure all the proper hash functions got made
-  HashTable<int, int> tInt(42);
-  HashTable<char, int> tChar(42);
-  HashTable<double, int> tDouble(42);
-  HashTable<string, int> tString(42);
+  HashMap<int, int> tInt(42);
+  HashMap<char, int> tChar(42);
+  HashMap<double, int> tDouble(42);
+  HashMap<string, int> tString(42);
 
   bool is_correct = true;
 
@@ -53,5 +53,5 @@ void hashTableTest2() {
     if (tString.search(to_string(i)) == nullptr || *tString.search(to_string(i)) != i+1) is_correct = false;
   }
 
-  assertTrue(is_correct, "HashTable comprehensive test");
+  assertTrue(is_correct, "HashMap comprehensive test");
 }

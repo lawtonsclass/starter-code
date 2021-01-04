@@ -1,4 +1,4 @@
-#include "linkedList.h"
+#include "list.h"
 #include "testing.h"
 
 void test_push_front();
@@ -22,7 +22,7 @@ int main() {
 // Caveat: size() needs to be correct before these tests pass
 
 void test_push_front() {
-  LinkedList l;
+  List l;
   bool is_correct = true;
 
   if (l.size() != 0) is_correct = false;
@@ -43,7 +43,7 @@ void test_push_front() {
 }
 
 void test_push_back() {
-  LinkedList l;
+  List l;
   bool is_correct = true;
 
   if (l.size() != 0) is_correct = false;
@@ -64,7 +64,7 @@ void test_push_back() {
 }
 
 void test_pop_front() {
-  LinkedList l;
+  List l;
   bool is_correct = true;
 
   l.push_back({2, 2});
@@ -81,7 +81,7 @@ void test_pop_front() {
 }
 
 void test_pop_back() {
-  LinkedList l;
+  List l;
   bool is_correct = true;
 
   l.push_back({2, 2});
@@ -98,13 +98,13 @@ void test_pop_back() {
 }
 
 void test_copy_constructor() {
-  LinkedList l;
+  List l;
   bool is_correct = true;
 
   l.push_back({2, 2});
   l.push_back({3, 4});
 
-  LinkedList l2(l);
+  List l2(l);
   if (l2.size() != 2) is_correct = false;
   if (l.getFirst() == l2.getFirst()) is_correct = false;
   if (l.getFirst()->next == l2.getFirst()->next) is_correct = false;
@@ -113,13 +113,13 @@ void test_copy_constructor() {
 }
 
 void test_copy_assignment() {
-  LinkedList l;
+  List l;
   bool is_correct = true;
 
   l.push_back({2, 2});
   l.push_back({3, 4});
 
-  LinkedList l2;
+  List l2;
   l2.push_back({5, 6});
   l2.push_back({7, 8});
   l2.push_back({7, 6});
