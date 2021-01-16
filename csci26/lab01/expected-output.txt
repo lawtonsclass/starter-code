@@ -1,0 +1,461 @@
+PASSED: false || (true && !false)
+PASSED: false || (false && !false)
+
+Test 0
+======
+Solution 1:
+  p -> 1
+
+Test 1
+======
+Solution 1:
+  p -> 0
+  q -> 0
+Solution 2:
+  p -> 0
+  q -> 1
+Solution 3:
+  p -> 1
+  q -> 1
+
+Test 2
+======
+Solution 1:
+  p -> 1
+  q -> 0
+  r -> 0
+Solution 2:
+  p -> 1
+  q -> 1
+  r -> 0
+
+Test 3
+======
+Solution 1:
+  p -> 0
+  q -> 0
+  r -> 0
+  s -> 0
+  t -> 0
+  u -> 0
+Solution 2:
+  p -> 0
+  q -> 0
+  r -> 0
+  s -> 0
+  t -> 0
+  u -> 1
+Solution 3:
+  p -> 0
+  q -> 0
+  r -> 0
+  s -> 0
+  t -> 1
+  u -> 0
+Solution 4:
+  p -> 0
+  q -> 0
+  r -> 0
+  s -> 0
+  t -> 1
+  u -> 1
+Solution 5:
+  p -> 0
+  q -> 0
+  r -> 0
+  s -> 1
+  t -> 0
+  u -> 0
+Solution 6:
+  p -> 0
+  q -> 0
+  r -> 0
+  s -> 1
+  t -> 0
+  u -> 1
+Solution 7:
+  p -> 0
+  q -> 0
+  r -> 0
+  s -> 1
+  t -> 1
+  u -> 0
+Solution 8:
+  p -> 0
+  q -> 0
+  r -> 0
+  s -> 1
+  t -> 1
+  u -> 1
+Solution 9:
+  p -> 0
+  q -> 0
+  r -> 1
+  s -> 0
+  t -> 1
+  u -> 0
+Solution 10:
+  p -> 0
+  q -> 0
+  r -> 1
+  s -> 1
+  t -> 0
+  u -> 0
+Solution 11:
+  p -> 0
+  q -> 0
+  r -> 1
+  s -> 1
+  t -> 0
+  u -> 1
+Solution 12:
+  p -> 0
+  q -> 0
+  r -> 1
+  s -> 1
+  t -> 1
+  u -> 0
+Solution 13:
+  p -> 0
+  q -> 0
+  r -> 1
+  s -> 1
+  t -> 1
+  u -> 1
+Solution 14:
+  p -> 0
+  q -> 1
+  r -> 0
+  s -> 0
+  t -> 0
+  u -> 0
+Solution 15:
+  p -> 0
+  q -> 1
+  r -> 0
+  s -> 0
+  t -> 0
+  u -> 1
+Solution 16:
+  p -> 0
+  q -> 1
+  r -> 0
+  s -> 0
+  t -> 1
+  u -> 0
+Solution 17:
+  p -> 0
+  q -> 1
+  r -> 0
+  s -> 0
+  t -> 1
+  u -> 1
+Solution 18:
+  p -> 0
+  q -> 1
+  r -> 0
+  s -> 1
+  t -> 0
+  u -> 0
+Solution 19:
+  p -> 0
+  q -> 1
+  r -> 0
+  s -> 1
+  t -> 0
+  u -> 1
+Solution 20:
+  p -> 0
+  q -> 1
+  r -> 0
+  s -> 1
+  t -> 1
+  u -> 0
+Solution 21:
+  p -> 0
+  q -> 1
+  r -> 0
+  s -> 1
+  t -> 1
+  u -> 1
+Solution 22:
+  p -> 0
+  q -> 1
+  r -> 1
+  s -> 0
+  t -> 0
+  u -> 0
+Solution 23:
+  p -> 0
+  q -> 1
+  r -> 1
+  s -> 0
+  t -> 0
+  u -> 1
+Solution 24:
+  p -> 0
+  q -> 1
+  r -> 1
+  s -> 0
+  t -> 1
+  u -> 0
+Solution 25:
+  p -> 0
+  q -> 1
+  r -> 1
+  s -> 0
+  t -> 1
+  u -> 1
+Solution 26:
+  p -> 0
+  q -> 1
+  r -> 1
+  s -> 1
+  t -> 0
+  u -> 0
+Solution 27:
+  p -> 0
+  q -> 1
+  r -> 1
+  s -> 1
+  t -> 0
+  u -> 1
+Solution 28:
+  p -> 0
+  q -> 1
+  r -> 1
+  s -> 1
+  t -> 1
+  u -> 0
+Solution 29:
+  p -> 0
+  q -> 1
+  r -> 1
+  s -> 1
+  t -> 1
+  u -> 1
+Solution 30:
+  p -> 1
+  q -> 0
+  r -> 0
+  s -> 0
+  t -> 0
+  u -> 0
+Solution 31:
+  p -> 1
+  q -> 0
+  r -> 0
+  s -> 0
+  t -> 0
+  u -> 1
+Solution 32:
+  p -> 1
+  q -> 0
+  r -> 0
+  s -> 0
+  t -> 1
+  u -> 0
+Solution 33:
+  p -> 1
+  q -> 0
+  r -> 0
+  s -> 0
+  t -> 1
+  u -> 1
+Solution 34:
+  p -> 1
+  q -> 0
+  r -> 0
+  s -> 1
+  t -> 0
+  u -> 0
+Solution 35:
+  p -> 1
+  q -> 0
+  r -> 0
+  s -> 1
+  t -> 0
+  u -> 1
+Solution 36:
+  p -> 1
+  q -> 0
+  r -> 0
+  s -> 1
+  t -> 1
+  u -> 0
+Solution 37:
+  p -> 1
+  q -> 0
+  r -> 0
+  s -> 1
+  t -> 1
+  u -> 1
+Solution 38:
+  p -> 1
+  q -> 0
+  r -> 1
+  s -> 0
+  t -> 0
+  u -> 0
+Solution 39:
+  p -> 1
+  q -> 0
+  r -> 1
+  s -> 0
+  t -> 0
+  u -> 1
+Solution 40:
+  p -> 1
+  q -> 0
+  r -> 1
+  s -> 0
+  t -> 1
+  u -> 0
+Solution 41:
+  p -> 1
+  q -> 0
+  r -> 1
+  s -> 0
+  t -> 1
+  u -> 1
+Solution 42:
+  p -> 1
+  q -> 0
+  r -> 1
+  s -> 1
+  t -> 0
+  u -> 0
+Solution 43:
+  p -> 1
+  q -> 0
+  r -> 1
+  s -> 1
+  t -> 0
+  u -> 1
+Solution 44:
+  p -> 1
+  q -> 0
+  r -> 1
+  s -> 1
+  t -> 1
+  u -> 0
+Solution 45:
+  p -> 1
+  q -> 0
+  r -> 1
+  s -> 1
+  t -> 1
+  u -> 1
+Solution 46:
+  p -> 1
+  q -> 1
+  r -> 0
+  s -> 0
+  t -> 0
+  u -> 0
+Solution 47:
+  p -> 1
+  q -> 1
+  r -> 0
+  s -> 0
+  t -> 0
+  u -> 1
+Solution 48:
+  p -> 1
+  q -> 1
+  r -> 0
+  s -> 0
+  t -> 1
+  u -> 0
+Solution 49:
+  p -> 1
+  q -> 1
+  r -> 0
+  s -> 0
+  t -> 1
+  u -> 1
+Solution 50:
+  p -> 1
+  q -> 1
+  r -> 0
+  s -> 1
+  t -> 0
+  u -> 0
+Solution 51:
+  p -> 1
+  q -> 1
+  r -> 0
+  s -> 1
+  t -> 0
+  u -> 1
+Solution 52:
+  p -> 1
+  q -> 1
+  r -> 0
+  s -> 1
+  t -> 1
+  u -> 0
+Solution 53:
+  p -> 1
+  q -> 1
+  r -> 0
+  s -> 1
+  t -> 1
+  u -> 1
+Solution 54:
+  p -> 1
+  q -> 1
+  r -> 1
+  s -> 0
+  t -> 0
+  u -> 0
+Solution 55:
+  p -> 1
+  q -> 1
+  r -> 1
+  s -> 0
+  t -> 0
+  u -> 1
+Solution 56:
+  p -> 1
+  q -> 1
+  r -> 1
+  s -> 0
+  t -> 1
+  u -> 0
+Solution 57:
+  p -> 1
+  q -> 1
+  r -> 1
+  s -> 0
+  t -> 1
+  u -> 1
+Solution 58:
+  p -> 1
+  q -> 1
+  r -> 1
+  s -> 1
+  t -> 0
+  u -> 0
+Solution 59:
+  p -> 1
+  q -> 1
+  r -> 1
+  s -> 1
+  t -> 0
+  u -> 1
+Solution 60:
+  p -> 1
+  q -> 1
+  r -> 1
+  s -> 1
+  t -> 1
+  u -> 0
+Solution 61:
+  p -> 1
+  q -> 1
+  r -> 1
+  s -> 1
+  t -> 1
+  u -> 1
+
