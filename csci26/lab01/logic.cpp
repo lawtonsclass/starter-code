@@ -88,7 +88,7 @@ void satSolveHelper(Formula& f, set<Var> remainingVars,
   //   - extract one Var (call it nextChoice) out of the remaing Vars
   //     (remainingVars.begin() is a good way to get a Var out of a set)
   //   - create a new set of remaining variables, removing the one you just
-  //     picked and put in your nextChoice variable
+  //     chose for your nextChoice variable
   //   - recursively try to solve the Formula f using nextChoice set to true
   //   - recursively try to solve the Formula f using nextChoice set to false
 }
