@@ -3,8 +3,6 @@
 using namespace std;
 
 int main() {
-  double price;
-
   // FIXME: get a number from the user (use the prompt "Enter a number: ")
 
   // FIXME: do the following, depending on the number entered
