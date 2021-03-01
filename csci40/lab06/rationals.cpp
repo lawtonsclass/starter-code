@@ -38,7 +38,7 @@ Rational Rational::operator*(const Rational& other) const {
 
 // FIXME: implement this method
 Rational Rational::operator+(const Rational& other) const {
-  // return a new Rational that is the result of multiplying the current object with other
+  // return a new Rational that is the result of adding the current object with other
 
   return Rational(0, 0);
 }
