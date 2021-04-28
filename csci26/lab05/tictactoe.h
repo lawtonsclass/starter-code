@@ -43,6 +43,8 @@ class GameTree {
                                      char player) const;
 
   std::shared_ptr<GameTreeNode> root;
+
+  friend class SimpleTests; // a hack to make some tests work
 };
 
 #endif /* TICTACTOE_H */

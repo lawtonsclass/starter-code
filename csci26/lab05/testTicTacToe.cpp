@@ -23,6 +23,12 @@ string prettyBoard(const Board& b) {
   return res;
 }
 
+class SimpleTests {
+ public:
+  static void testWinner(GameTree& t);
+  static void testBuildTree(GameTree& t);
+};
+
 void testTicTacToe1(GameTree& t);
 void testTicTacToe2(GameTree& t);
 void testTicTacToe3(GameTree& t);
@@ -32,6 +38,9 @@ int main(int argc, char* argv[]) {
   GameTree t;
 
   if (argc == 2 && string(argv[1]) == "runtests") {
+    SimpleTests::testWinner(t);
+    SimpleTests::testBuildTree(t);
+
     testTicTacToe1(t);
     testTicTacToe2(t);
     testTicTacToe3(t);
@@ -66,6 +75,93 @@ int main(int argc, char* argv[]) {
   }
 
   return 0;
+}
+
+void SimpleTests::testWinner(GameTree& t) {
+  bool is_correct = true;
+
+  Board b1 = {{'-', 'O', 'X'}, {'O', 'X', 'O'}, {'X', 'O', '-'}};
+  is_correct = t.winner(b1) == 'X' ? true : false;
+
+  Board b2 = {{'-', 'X', 'O'}, {'X', 'X', 'O'}, {'-', 'X', 'O'}};
+  is_correct = t.winner(b2) == 'O' ? true : false;
+
+  Board b3 = {{'X', 'O', '-'}, {'-', '-', 'X'}, {'O', '-', '-'}};
+  is_correct = t.winner(b3) == '?' ? true : false;
+
+  assertTrue(is_correct, "testWinner");
+}
+
+void SimpleTests::testBuildTree(GameTree& t) {
+  bool is_correct = true;
+
+  // this test will start with the following board:
+  //   X | O | O 
+  //  ---+---+---
+  //   O | X | - 
+  //  ---+---+---
+  //   X | - | - 
+  // (and it's X's turn to move)
+
+  Board startingBoard = {{'X', 'O', 'O'}, {'O', 'X', '-'}, {'X', '-', '-'}};
+
+  // let's build a tree starting there
+  shared_ptr<GameTreeNode> root = make_shared<GameTreeNode>();
+  root->board = startingBoard;
+  t.buildTree(root, 'X');
+
+  // the following next moves are possible:
+  //      (1)          (2)          (3)
+  //   X | O | O    X | O | O    X | O | O 
+  //  ---+---+---  ---+---+---  ---+---+---
+  //   O | X | -    O | X | -    O | X | X 
+  //  ---+---+---  ---+---+---  ---+---+---
+  //   X | - | X ,  X | X | - ,  X | - | - 
+
+  // Let's make sure they were added
+  Board nextMove1 = {{'X', 'O', 'O'}, {'O', 'X', '-'}, {'X', '-', 'X'}};
+  Board nextMove2 = {{'X', 'O', 'O'}, {'O', 'X', '-'}, {'X', 'X', '-'}};
+  Board nextMove3 = {{'X', 'O', 'O'}, {'O', 'X', 'X'}, {'X', '-', '-'}};
+  // the following three lines are disgusting, but they work
+  shared_ptr<GameTreeNode> subtree1 = *root->nextMoves.begin();
+  shared_ptr<GameTreeNode> subtree2 = *++root->nextMoves.begin();
+  shared_ptr<GameTreeNode> subtree3 = *++++root->nextMoves.begin();
+  is_correct = subtree1->board == nextMove1 ? true : false;
+  is_correct = subtree2->board == nextMove2 ? true : false;
+  is_correct = subtree3->board == nextMove3 ? true : false;
+
+  // child board #1 is a winner, so it should have no children of its own
+  is_correct = subtree1->nextMoves.size() == 0 ? true : false;
+
+  // child board #2 should have two children:
+  //     (2.1)        (2.2)
+  //   X | O | O    X | O | O 
+  //  ---+---+---  ---+---+---
+  //   O | X | -    O | X | - 
+  //  ---+---+---  ---+---+---
+  //   X | X | O ,  X | X | O 
+  Board nextMove2_1 = {{'X', 'O', 'O'}, {'O', 'X', '-'}, {'X', 'X', 'O'}};
+  Board nextMove2_2 = {{'X', 'O', 'O'}, {'O', 'X', 'O'}, {'X', 'X', '-'}};
+  shared_ptr<GameTreeNode> subtree2_1 = *subtree2->nextMoves.begin();
+  shared_ptr<GameTreeNode> subtree2_2 = *++subtree2->nextMoves.begin();
+  is_correct = subtree2_1->board == nextMove2_1 ? true : false;
+  is_correct = subtree2_2->board == nextMove2_2 ? true : false;
+  
+  // child board #3 should also have two children:
+  //     (3.1)        (3.2)
+  //   X | O | O    X | O | O 
+  //  ---+---+---  ---+---+---
+  //   O | X | X    O | X | X 
+  //  ---+---+---  ---+---+---
+  //   X | - | O ,  X | O | - 
+  Board nextMove3_1 = {{'X', 'O', 'O'}, {'O', 'X', 'X'}, {'X', '-', 'O'}};
+  Board nextMove3_2 = {{'X', 'O', 'O'}, {'O', 'X', 'X'}, {'X', 'O', '-'}};
+  shared_ptr<GameTreeNode> subtree3_1 = *subtree3->nextMoves.begin();
+  shared_ptr<GameTreeNode> subtree3_2 = *++subtree3->nextMoves.begin();
+  is_correct = subtree3_1->board == nextMove3_1 ? true : false;
+  is_correct = subtree3_2->board == nextMove3_2 ? true : false;
+
+  assertTrue(is_correct, "testBuildTree");
 }
 
 void testTicTacToe1(GameTree& t) {
