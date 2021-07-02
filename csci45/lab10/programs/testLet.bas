@@ -1,0 +1,16 @@
+1 LET X = 8
+2 LET Y = 6
+3 LET Z = 7
+4 LET A = X + Y
+5 PRINT A
+6 LET A = Y + Z
+7 PRINT A
+8 LET A = X - Y
+9 PRINT A
+10 LET A = Y - Z
+11 PRINT A
+12 LET A = X * Y
+13 PRINT A
+14 LET A = Y * Z
+15 PRINT A
+16 END
