@@ -47,6 +47,8 @@ void EightBitALU::ADD(bool res[8], bool shouldSetFlags) {
   //        during the negation phase inside SUB, so we 
   //        don't always want to set the flags.
   // Hint: for bools, != acts like xor
+  // Hint: overflow is when carry in != carry out at the MSB
+  //       (most significant bit)
 }
 
 void EightBitALU::twosComplementOperand2() {

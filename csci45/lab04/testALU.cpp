@@ -214,13 +214,13 @@ void testADD(EightBitALU& alu) {
   cout << " (Your answer, N, Z, C, V): " << boolArrayToBinaryString(res) << ", " << alu.getN() << ", " << alu.getZ() << ", " << alu.getC() << ", " << alu.getV() << endl;
 
   // 11100000 + 10111010 = 10011010
-  // N Z C V: 1 0 1 1
+  // N Z C V: 1 0 1 0
   binaryStringToBoolArray("11100000", operand1);
   binaryStringToBoolArray("10111010", operand2);
   alu.loadOperand1(operand1);
   alu.loadOperand2(operand2);
   alu.compute(selector, res);
-  assertTrue(boolArrayToBinaryString(res) == "10011010" && alu.getN() == 1 && alu.getZ() == 0 && alu.getC() == 1 && alu.getV() == 1, "testADD 4");
+  assertTrue(boolArrayToBinaryString(res) == "10011010" && alu.getN() == 1 && alu.getZ() == 0 && alu.getC() == 1 && alu.getV() == 0, "testADD 4");
   cout << " (Your answer, N, Z, C, V): " << boolArrayToBinaryString(res) << ", " << alu.getN() << ", " << alu.getZ() << ", " << alu.getC() << ", " << alu.getV() << endl;
 
   // N Z C V: 1 0 0 1
@@ -229,17 +229,17 @@ void testADD(EightBitALU& alu) {
   alu.loadOperand1(operand1);
   alu.loadOperand2(operand2);
   alu.compute(selector, res);
-  assertTrue(boolArrayToBinaryString(res) == "10010011" && alu.getN() == 1 && alu.getZ() == 0 && alu.getC() == 0 && alu.getV() == 1, "testADD");
+  assertTrue(boolArrayToBinaryString(res) == "10010011" && alu.getN() == 1 && alu.getZ() == 0 && alu.getC() == 0 && alu.getV() == 1, "testADD 5");
   cout << " (Your answer, N, Z, C, V): " << boolArrayToBinaryString(res) << ", " << alu.getN() << ", " << alu.getZ() << ", " << alu.getC() << ", " << alu.getV() << endl;
 
   // 10000000 + 10000000 = 00000000
-  // N Z C V: 0 1 1 0
+  // N Z C V: 0 1 1 1
   binaryStringToBoolArray("10000000", operand1);
   binaryStringToBoolArray("10000000", operand2);
   alu.loadOperand1(operand1);
   alu.loadOperand2(operand2);
   alu.compute(selector, res);
-  assertTrue(boolArrayToBinaryString(res) == "00000000" && alu.getN() == 0 && alu.getZ() == 1 && alu.getC() == 1 && alu.getV() == 0, "testADD 5");
+  assertTrue(boolArrayToBinaryString(res) == "00000000" && alu.getN() == 0 && alu.getZ() == 1 && alu.getC() == 1 && alu.getV() == 1, "testADD 6");
   cout << " (Your answer, N, Z, C, V): " << boolArrayToBinaryString(res) << ", " << alu.getN() << ", " << alu.getZ() << ", " << alu.getC() << ", " << alu.getV() << endl;
 }
 
@@ -270,13 +270,13 @@ void testSUB(EightBitALU& alu) {
   cout << " (Your answer, N, Z, C, V): " << boolArrayToBinaryString(res) << ", " << alu.getN() << ", " << alu.getZ() << ", " << alu.getC() << ", " << alu.getV() << endl;
 
   // 11110011 - 01010111 = 10011100
-  // N Z C V: 1 0 1 1
+  // N Z C V: 1 0 1 0
   binaryStringToBoolArray("11110011", operand1);
   binaryStringToBoolArray("01010111", operand2);
   alu.loadOperand1(operand1);
   alu.loadOperand2(operand2);
   alu.compute(selector, res);
-  assertTrue(boolArrayToBinaryString(res) == "10011100" && alu.getN() == 1 && alu.getZ() == 0 && alu.getC() == 1 && alu.getV() == 1, "testSUB 3");
+  assertTrue(boolArrayToBinaryString(res) == "10011100" && alu.getN() == 1 && alu.getZ() == 0 && alu.getC() == 1 && alu.getV() == 0, "testSUB 3");
   cout << " (Your answer, N, Z, C, V): " << boolArrayToBinaryString(res) << ", " << alu.getN() << ", " << alu.getZ() << ", " << alu.getC() << ", " << alu.getV() << endl;
 
   // 01101110 - 11100000 = 10001110
@@ -290,22 +290,22 @@ void testSUB(EightBitALU& alu) {
   cout << " (Your answer, N, Z, C, V): " << boolArrayToBinaryString(res) << ", " << alu.getN() << ", " << alu.getZ() << ", " << alu.getC() << ", " << alu.getV() << endl;
 
   // 11000010 - 10001001 = 00111001
-  // N Z C V: 0 0 1 1
+  // N Z C V: 0 0 1 0
   binaryStringToBoolArray("11000010", operand1);
   binaryStringToBoolArray("10001001", operand2);
   alu.loadOperand1(operand1);
   alu.loadOperand2(operand2);
   alu.compute(selector, res);
-  assertTrue(boolArrayToBinaryString(res) == "00111001" && alu.getN() == 0 && alu.getZ() == 0 && alu.getC() == 1 && alu.getV() == 1, "testSUB 5");
+  assertTrue(boolArrayToBinaryString(res) == "00111001" && alu.getN() == 0 && alu.getZ() == 0 && alu.getC() == 1 && alu.getV() == 0, "testSUB 5");
   cout << " (Your answer, N, Z, C, V): " << boolArrayToBinaryString(res) << ", " << alu.getN() << ", " << alu.getZ() << ", " << alu.getC() << ", " << alu.getV() << endl;
 
   // 11000010 - 11000010 = 00000000
-  // N Z C V: 0 1 1 1
+  // N Z C V: 0 1 1 0
   binaryStringToBoolArray("11000010", operand1);
   binaryStringToBoolArray("11000010", operand2);
   alu.loadOperand1(operand1);
   alu.loadOperand2(operand2);
   alu.compute(selector, res);
-  assertTrue(boolArrayToBinaryString(res) == "00000000" && alu.getN() == 0 && alu.getZ() == 1 && alu.getC() == 1 && alu.getV() == 1, "testSUB 6");
+  assertTrue(boolArrayToBinaryString(res) == "00000000" && alu.getN() == 0 && alu.getZ() == 1 && alu.getC() == 1 && alu.getV() == 0, "testSUB 6");
   cout << " (Your answer, N, Z, C, V): " << boolArrayToBinaryString(res) << ", " << alu.getN() << ", " << alu.getZ() << ", " << alu.getC() << ", " << alu.getV() << endl;
 }
