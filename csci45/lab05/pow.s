@@ -11,6 +11,7 @@ main:
   bl scanf // get the ints
 
   // FIXME: call pow using the two ints on the stack as parameters
+  //        the first parameter is at sp and the second is at sp+4
 
   // FIXME: print out the result using the int_printf format string
 
