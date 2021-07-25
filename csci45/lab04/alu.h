@@ -16,7 +16,7 @@ class EightBitALU {
  private:
   void AND(bool res[8]);
   void OR(bool res[8]);
-  void ADD(bool res[8], bool shouldSetFlags = true);
+  void ADD(bool res[8]);
   void twosComplementOperand2();
 
   bool operand1[8];

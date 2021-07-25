@@ -39,13 +39,14 @@ void EightBitALU::OR(bool res[8]) {
   // FIXME: set flags to their appropriate values
 }
 
-void EightBitALU::ADD(bool res[8], bool shouldSetFlags) {
+void EightBitALU::ADD(bool res[8]) {
   // FIXME: perform ADD on operand1 and operand2
   // FIXME: store the result into res
-  // FIXME: set flags to their appropriate values ONLY if 
-  //        shouldSetFlags is true. We want to use ADD
-  //        during the negation phase inside SUB, so we 
-  //        don't always want to set the flags.
+  // FIXME: set flags to their appropriate values
+  
+  // You'll likely end up using ADD twice when you perform SUB, since
+  // converting to two's complement requires addition
+
   // Hint: for bools, != acts like xor
   // Hint: overflow is when carry in != carry out at the MSB
   //       (most significant bit)
@@ -63,7 +64,7 @@ void EightBitALU::compute(const bool selector[2], bool res[8]) {
   // FIXME: perform the appropriate operation on operand1 and operand2, 
   //        based on the value of the selector:
   //          00: operand1 AND operand2
-  //          01: operand1 OR operand2
+  //          01: operand1 OR operand2 (remember that this means {1, 0})
   //          10: operand1 ADD operand2
   //          11: operand1 SUB operand2
   // FIXME: save the result of the operation in res
