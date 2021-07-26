@@ -22,4 +22,6 @@ grayVFP:
   // the red, green, and blue channels of the original pixel all to
   // grayscale_value.
 
+  // Hint: use the vcvtr instruction to do the rounding
+
   pop {r4-r11, pc}
