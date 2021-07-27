@@ -110,6 +110,7 @@ int main(int argc, char* argv[]) {
       continue;
     }
     // FIXME: Insert code here to handle all the remaining operations
+    //        (That is, PRINT, LET, and IF)
     // Remember to add lines to the data vector if you want things to
     // be added to the .data section.
     // printing.c will be linked with your compiled assembly, so make
