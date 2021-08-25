@@ -15,6 +15,7 @@ int main() {
   testVec4();
 
   // FIXME: Add 4 more tests
+  // That is, call assertTrue EXACTLY 4 more times
 
   return 0;
 }

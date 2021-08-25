@@ -6,10 +6,10 @@ main:
 
   // List of arm32 syscalls: https://chromium.googlesource.com/chromiumos/docs/+/master/constants/syscalls.md#arm-32_bit_EABI
 
-  /*
-  FIXME: call the "gettimeofday" syscall to get the current number of
-  seconds since January 1, 1970 (it's a long story) and print it out. 
+  // FIXME: call the "gettimeofday" syscall to get the current number of
+  // seconds since January 1, 1970 (it's a long story) and print it out. 
 
+  /*
   Use the "man gettimeofday" terminal command to look up what the
   syscall needs. It takes two parameters--tv and tz. 
 

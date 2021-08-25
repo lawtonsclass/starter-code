@@ -27,6 +27,7 @@ int main() {
   runBoxTestIncDec();
 
   // FIXME: implement 6 more tests
+  // That is, call assertTrue EXACTLY 6 more times
 
   return 0;
 }
