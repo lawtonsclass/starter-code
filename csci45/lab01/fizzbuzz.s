@@ -15,6 +15,8 @@ fizzbuzz:
   // There is no modulus (%) instruction in ARM assembly! How can you
   // get it using division, multiplication, and subtraction?
 
+  // Don't call the exit syscall--let the program continue executing below
+
   // DON'T ADD ANY MORE CODE AFTER THIS LINE
   // (You'll still need to add .data)
   // =======================================
