@@ -56,7 +56,7 @@ class CPU {
   Register decodeRegister(unsigned char encoded_register) const;
   int& getRegister(Register whichRegister);
 
-  // registers
+  // registers & flags
   unsigned char PC;
   int R0;
   int R1;
