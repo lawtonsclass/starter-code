@@ -5,6 +5,12 @@ BINARIES=testDeque testStack
 
 all: $(BINARIES)
 
+testDeque.o : testDeque.cpp Deque.h
+	$(CXX) $(CXXFLAGS) -c $<
+
+testStack.o : testStack.cpp Deque.h Stack.h
+	$(CXX) $(CXXFLAGS) -c $<
+
 %.o : %.cpp
 	$(CXX) $(CXXFLAGS) -c $^
 

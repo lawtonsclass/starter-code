@@ -128,7 +128,7 @@ bool GameTree::matches(const Board& possibility,
                        const Board& currentBoard) const {
   for (int row = 0; row < 3; row++) {
     for (int col = 0; col < 3; col++) {
-      // a mismatch occurs if the possibility isn't '-' and the board disagree
+      // a mismatch occurs if the possibility isn't '-' and the boards disagree
       // on the X/O in that spot
       if (possibility.at(row).at(col) != '-' &&
           possibility.at(row).at(col) != currentBoard.at(row).at(col))

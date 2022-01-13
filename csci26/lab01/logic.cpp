@@ -67,12 +67,11 @@ set<map<Var, bool>> satSolve(Formula& f) {
 // Explanations of the other parameters:
 //   - remainingVars: the variables that you have not yet picked values for
 //   - choicesForVars: the variables that you *have* picked values for (and
-//   those values)
-//   - satisfyingSolutions: a set of all the different variable choices
-//   (represented as a map)
-//                          that make the Formula f true. This is a reference,
-//                          so you'll extend it each time you find a new
-//                          solution.
+//     those values)
+//   - satisfyingSolutions: a set of all the different variable
+//     choices (represented as a map) that make the Formula f true. This
+//     is a reference, so you'll extend it each time you find a new
+//     solution.
 void satSolveHelper(Formula& f, set<Var> remainingVars,
                     map<Var, bool> choicesForVars,
                     set<map<Var, bool>>& satisfyingSolutions) {

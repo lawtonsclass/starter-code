@@ -22,6 +22,10 @@ grayVFP:
   // the red, green, and blue channels of the original pixel all to
   // grayscale_value.
 
-  // Hint: use the vcvtr instruction to do the rounding
+  // Remember that VFP is *not* Neon--you can't work on multiple pixels at a time
+  // Hint 1: So, read a single color at a time for a single pixel with ldrb
+  // Hint 2: Put that color in a 32-bit VFP register with vmov
+  // Hint 3: Use vcvt to widen/convert the 32-bit int into a 64-bit float
+  // Hint 4: use the vcvtr instruction to do the rounding and conversion to a 32-bit int
 
   pop {r4-r11, pc}
