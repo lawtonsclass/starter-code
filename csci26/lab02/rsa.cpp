@@ -37,7 +37,7 @@ int computeE(int phi) {
   return -42;
 }
 
-// returns a pair (a, b) such that ax + by = gcd(a, b)
+// returns a pair (a, b) such that ax + by = gcd(x, y)
 std::pair<int, int> extended_gcd(int x, int y) {
   // FIXME: implement this function
   // See https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm#Pseudocode
