@@ -14,7 +14,8 @@ int main() {
       // the current coordinate is (x, y)
 
       // FIXME: check if the current coordinate is in the graph that the user
-      // chose. Make sure to round() the y coordinate for a given x coordinate!
+      // chose. Make sure to round() the RHS of the equation before
+      // checking for equality!
       // For example, if the user chose choice 0 (y = (0.15x)^2 - 3), then you
       // should check whether rounding (0.15x)^2 - 3 equals y--if it does, then
       // this point should be plotted on our graph.
