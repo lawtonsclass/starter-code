@@ -1,7 +1,7 @@
 BINARIES=testRelation
 
 CC=g++
-CCFLAGS=-std=c++17 -g
+CCFLAGS=-g
 
 all: $(BINARIES)
 

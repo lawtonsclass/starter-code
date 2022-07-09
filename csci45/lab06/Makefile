@@ -1,6 +1,6 @@
 # the programs we want to use to compile our stuff
 CXX=g++
-CXXFLAGS=-std=c++17 -g
+CXXFLAGS=-g
 CC=gcc
 CCFLAGS=-g
 AS=as

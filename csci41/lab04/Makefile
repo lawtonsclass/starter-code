@@ -1,6 +1,6 @@
 CXX=g++
 # we're gonna pass the -g flag so that you can use GDB
-CXXFLAGS=-std=c++17 -g
+CXXFLAGS=-g
 
 BINARIES=segfault linkedListTests snake
 

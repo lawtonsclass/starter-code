@@ -1,6 +1,6 @@
 # the programs we want to use to compile our stuff
 CXX=g++
-CXXFLAGS=-std=c++17 -g -mfpu=neon -march=armv8-a
+CXXFLAGS=-g -mfpu=neon -march=armv8-a
 CC=gcc
 CCFLAGS=-g -mfpu=neon -march=armv8-a
 AS=as
