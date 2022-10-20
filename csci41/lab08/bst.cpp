@@ -18,7 +18,7 @@ BST::BST() {}
 // FIXME: add a new BSTNode (created on the heap) into the current tree
 // the key of the new node is p.number, and the data is p
 void BST::catchPokemon(const Pokemon& p) {
-  // emtpy tree case: make this pokemon the root and you're done
+  // empty tree case: make this pokemon the root and you're done
 
   // Otherwise, the root is not null and we need to search--
   // Search for the node to make sure it's not already there.

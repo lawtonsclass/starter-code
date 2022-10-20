@@ -175,16 +175,16 @@ ExpressionNode* makeComplicatedTree() {
   //                /            \
   //              "/"             -
   //              /  \           / \
-  //             /     \        1   *
-  //            |       \          / \
-  //            +        2        8   9
-  //           /  \
-  //          /     \
-  //         *        -
-  //        / \      / \
-  //       6   7    3   +
-  //                   / \
-  //                  5  4
+  //             /    \         /   \
+  //            |      \       /     \
+  //            +       2     1       *
+  //           /  \                  / \
+  //          /     \               /   \
+  //         *       -             8     9
+  //        / \     / \
+  //       6   7   3   +
+  //                  / \
+  //                 5  4
   //
   ExpressionNode* number1 = new ExpressionNode;
   ExpressionNode* number2 = new ExpressionNode;
