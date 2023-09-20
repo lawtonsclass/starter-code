@@ -17,5 +17,5 @@ main:
   //   getchar is supposed to return characters, so you might expect to 
   //   get an 8-bit -1 in a 32-bit register (i.e. 0x000000FF), but you don't!
   //
-  // To test your code, you can use the `wc -l filename` terminal
+  // To test your code, you can use the `wc -w filename` terminal
   // command to get the correct word count for any file.
