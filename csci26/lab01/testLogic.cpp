@@ -53,7 +53,7 @@ void printSolutions(set<map<Var, bool>>& solutions) {
 // the actual tests:
 
 void testEval() {
-  // p_or_q_and_not_r represents (p ∨ (q ∧ ¬r)
+  // p_or_q_and_not_r represents (p ∨ (q ∧ ¬r))
   shared_ptr<Var> p = make_shared<Var>("p");
   shared_ptr<Var> q = make_shared<Var>("q");
   shared_ptr<Var> r = make_shared<Var>("r");
