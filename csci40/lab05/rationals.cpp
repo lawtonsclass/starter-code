@@ -72,7 +72,7 @@ The final string you return should be exactly "-1 / 22"
 If numer = 2 and denom = 4, the final string should be "1 / 2"
 */
 string rationalPrettyString(int numer, int denom) {
-  // FIXME: call simplify before converting/printing
+  // FIXME: call simplify before converting
 
   return "stub";
 }
