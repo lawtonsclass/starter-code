@@ -9,6 +9,10 @@ using namespace std;
 Rational::Rational(int n, int d) {
   // set numer and denom, and then simplify
 
+  // when you're inside the class implementation and you want to call
+  // a method on your current object, you don't use a dot: just call
+  // it like you would call a function
+
   // remember that constructors don't return anything!
   // They implicitly "return" a newly-made object.
 }
