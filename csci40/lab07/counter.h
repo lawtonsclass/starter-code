@@ -24,7 +24,7 @@ void Counter_construct(Counter* self, int startingValue = 0);
 void Counter_inc(Counter* self);
 
 // reset the Counter's count to another value
-void Counter_reset(Counter* self, int startingValue);
+void Counter_reset(Counter* self, int newValue);
 
 // retrieve the Counter's count
 int Counter_getCount(const Counter* self);
