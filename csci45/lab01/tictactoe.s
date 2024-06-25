@@ -1,18 +1,18 @@
 .global _start
 _start:
   // output prompt
-  mov r7, #4
-  mov r0, #1
-  ldr r1, =prompt
-  mov r2, #34
-  swi 0
+  mov x8, #64
+  mov w0, #1
+  ldr x1, =prompt
+  mov x2, #34
+  svc #0
 
   // get the sub-board
-  mov r7, #3
-  mov r0, #0
-  ldr r1, =board_piece
-  mov r2, #4
-  swi 0
+  mov x8, #63
+  mov w0, #0
+  ldr x1, =board_piece
+  mov x2, #4
+  svc #0
 
   // FIXME: using the input row/column/diagonal (stored in the
   // `board_piece` string), see if there is a winner. If there is one,
@@ -20,9 +20,9 @@ _start:
   // print a question mark followed by a newline.
 
   // exit
-  mov r0, #0
-  mov r7, #1
-  swi 0
+  mov x0, #0
+  mov x8, #93
+  svc #0
 
 
 .data

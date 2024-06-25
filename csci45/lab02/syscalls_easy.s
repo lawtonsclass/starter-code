@@ -1,14 +1,14 @@
 .global main
 .type main, %function
-.func main
 main:
-  push {r4-r11, lr}
+  sub sp, sp, #16
+  str lr, [sp]
 
-  // List of arm32 syscalls: https://chromium.googlesource.com/chromiumos/docs/+/master/constants/syscalls.md#arm-32_bit_EABI
+  // List of arm64 syscalls: https://gpages.juszkiewicz.com.pl/syscalls-table/syscalls.html
 
   // FIXME: call the "getuid" syscall (not getuid32) to get your user
   // ID (every user account on a Linux system has an ID). The syscall
-  // takes no parameters and returns the value in the r0 register.
+  // takes no parameters and returns a 4-byte value in the w0 register.
 
   // FIXME: Print the user ID that you get back as an unsigned integer
   // value using printf and the %u specifier (instead of %d). Print a
@@ -19,5 +19,7 @@ main:
   // the number you print is correct.
 
   // return 0
-  mov r0, #0
-  pop {r4-r11, pc}
+  mov w0, #0
+  ldr lr, [sp]
+  add sp, sp, #16
+  ret

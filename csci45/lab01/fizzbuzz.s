@@ -1,12 +1,12 @@
 .global fizzbuzz
 .type fizzbuzz, %function
-.func fizzbuzz
 fizzbuzz:
-  push {r4-r11, lr}
+  sub sp, sp, #16
+  str lr, [sp]
   // ===================================
   // DON'T TOUCH ANYTHING ABOVE THE LINE
 
-  // FIXME: a nonnegative number has been placed in r0. Print:
+  // FIXME: a nonnegative number has been placed in w0. Print:
   //   "fizz\n" if the number is divisible by 3
   //   "buzz\n" if the number is divisible by 5
   //   "fizzbuzz\n" if the number is divisible by 3 *and* 5
@@ -20,7 +20,9 @@ fizzbuzz:
   // DON'T ADD ANY MORE CODE AFTER THIS LINE
   // (You'll still need to add .data)
   // =======================================
-  pop {r4-r11, pc}
+  ldr lr, [sp]
+  add sp, sp, #16
+  ret
 
 .data
 // FIXME: include your strings to print here.

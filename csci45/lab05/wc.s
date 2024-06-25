@@ -1,6 +1,5 @@
 .global main
 .type main, %function
-.func main
 main:
   // FIXME: print out the number of words that are input to stdin 
   // before the end of file character is reached. Create new

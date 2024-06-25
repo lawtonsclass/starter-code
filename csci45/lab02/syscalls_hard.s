@@ -1,10 +1,10 @@
 .global main
 .type main, %function
-.func main
 main:
-  push {r4-r11, lr}
+  sub sp, sp, #16
+  str lr, [sp]
 
-  // List of arm32 syscalls: https://chromium.googlesource.com/chromiumos/docs/+/master/constants/syscalls.md#arm-32_bit_EABI
+  // List of arm64 syscalls: https://gpages.juszkiewicz.com.pl/syscalls-table/syscalls.html
 
   // FIXME: call the "gettimeofday" syscall to get the current number of
   // seconds since January 1, 1970 (it's a long story) and print it out. 
@@ -43,5 +43,7 @@ main:
 
 
   // return 0
-  mov r0, #0
-  pop {r4-r11, pc}
+  mov w0, #0
+  ldr lr, [sp]
+  add sp, sp, #16
+  ret

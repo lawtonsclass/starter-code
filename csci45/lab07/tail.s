@@ -1,6 +1,5 @@
 .global main
 .type main, %function
-.func main
 main:
   // FIXME: open the file in argv[1] and print the last 10 lines of
   // it. You can assume the file exists and will successfully open.
