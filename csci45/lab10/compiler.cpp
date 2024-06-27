@@ -138,10 +138,10 @@ int main(int argc, char* argv[]) {
   struct utsname u;
   uname(&u);
   string terminal_command_to_compile = "";
-  if (string(u.machine) == "armv7l")
+  if (string(u.machine) == "aarch64")
     terminal_command_to_compile = "gcc -g assembly.s printing.c";
   else
-    terminal_command_to_compile = "arm-linux-gnueabihf-gcc -g -static assembly.s printing.c";
+    terminal_command_to_compile = "aarch64-linux-gnu-gcc -g -static assembly.s printing.c";
 
   // Compile
   if (system(terminal_command_to_compile.c_str()) != 0) {
