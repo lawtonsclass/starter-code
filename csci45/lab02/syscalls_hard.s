@@ -32,9 +32,9 @@ main:
   figure out how big it is in order to extract it.  Go into the
   struct, get the time_t part out, and save it in a register.
 
-  Finally, print the time_t value as an unsigned integer value using
-  printf and the %u specifier (instead of %d). Print a newline too.
-  Now you're done!
+  Finally, print the time_t value as an unsigned long value using
+  printf and the %lu specifier (since it's more than 4 bytes). 
+  Print a newline too. Now you're done!
 
   For fun, you can confirm that the number you print is correct by
   calculating 1970 + ([printed number] / 60 / 60 / 24 / 365.25) and
