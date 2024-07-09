@@ -29,6 +29,8 @@ void testPalindrome() {
   assertTrue(isPalindrome("abcddcba"), "\"abcddcba\" is a palindrome");
   assertTrue(isPalindrome("RaCe car"), "\"RaCe car\" is a palindrome");
   assertTrue(!isPalindrome("daffodil"), "\"daffodil\" is not a palindrome");
+  assertTrue(!isPalindrome("abcda"), "\"abcda\" is not a palindrome");
+  assertTrue(!isPalindrome("abcdecba"), "\"abcdecba\" is not a palindrome");
 }
 
 void testSumDigits() {
