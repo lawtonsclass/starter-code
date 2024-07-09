@@ -19,7 +19,8 @@ int main(int argc, char *argv[]) {
   // etch-a-sketch move in a given direction:
   // if you read a 'l', make the EtchASketch object move left, 
   // if you read a 'r', make the EtchASketch object move right, etc.
-  // if you read an *invalid* character (not in {l, r, u, d}), skip to the next one
+  // if you read an *invalid* character (not one of {l, r, u, d}),
+  // skip it and move on to the next char
 
   // FIXME: print the pretty drawing that you built up in the EtchASketch object
 
