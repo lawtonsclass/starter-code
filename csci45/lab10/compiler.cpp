@@ -23,24 +23,24 @@ void error() {
 }
 
 string variableToRegister(const string& var) {
-  // We can't use R0-R3, R14, or R15, but we have plenty other
+  // We can't use any temporary registers, but we have plenty saved
   // registers left!
   if (var == "A")
-    return "R4";
+    return "X19";
   else if (var == "B")
-    return "R5";
+    return "X20";
   else if (var == "C")
-    return "R6";
+    return "X21";
   else if (var == "I")
-    return "R7";
+    return "X22";
   else if (var == "J")
-    return "R8";
+    return "X23";
   else if (var == "X")
-    return "R9";
+    return "X24";
   else if (var == "Y")
-    return "R10";
+    return "X25";
   else if (var == "Z")
-    return "R11";
+    return "X26";
   else
     error();  // Invalid variable
 
@@ -57,10 +57,13 @@ int main(int argc, char* argv[]) {
   // start off the program
   assembly << ".global main" << endl;
   assembly << "main:" << endl;
-  assembly << "  push {lr}" << endl;
-  assembly << "  push {r4-r11}" << endl;
+  assembly << "  sub sp, sp, #80" << endl;
+  assembly << "  str lr, [sp]" << endl;
+  for (int i = 19; i <= 26; i++) {
+    assembly << "  str X" << i << ", [sp, #" << (i-18)*8 << "]" << endl;
+  }
   // Initialize all variables to 0
-  for (int i = 4; i <= 11; i++) assembly << "  mov R" << i << ", #0" << endl;
+  for (int i = 19; i <= 26; i++) assembly << "  mov X" << i << ", #0" << endl;
 
   // The following data vector will hold all the lines that need to go
   // in the .data segment after the code.
@@ -103,10 +106,10 @@ int main(int argc, char* argv[]) {
       int target;
       ss >> target;
       if (!ss) error();
-      assembly << "  BAL line_" << target << endl;
+      assembly << "  B.AL line_" << target << endl;
       continue;
     } else if (operation == "END") {
-      assembly << "  BAL end" << endl;
+      assembly << "  B.AL end" << endl;
       continue;
     }
     // FIXME: Insert code here to handle all the remaining operations
@@ -119,9 +122,13 @@ int main(int argc, char* argv[]) {
 
   // finish the main function
   assembly << "end:" << endl;
-  assembly << "  mov r0, #0" << endl;
-  assembly << "  pop {r4-r11}" << endl;
-  assembly << "  pop {pc}" << endl;
+  assembly << "  mov W0, #0" << endl;
+  assembly << "  ldr lr, [sp]" << endl;
+  for (int i = 19; i <= 26; i++) {
+    assembly << "  ldr X" << i << ", [sp, #" << (i-18)*8 << "]" << endl;
+  }
+  assembly << "  add sp, sp, #80" << endl;
+  assembly << "  ret" << endl;
   assembly << endl;
 
   // add the data section
