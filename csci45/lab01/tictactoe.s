@@ -20,7 +20,7 @@ _start:
   // print a question mark followed by a newline.
 
   // exit
-  mov x0, #0
+  mov w0, #0
   mov x8, #93
   svc #0
 
