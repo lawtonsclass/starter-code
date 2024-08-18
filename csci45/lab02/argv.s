@@ -11,6 +11,10 @@ main:
   // FIXME: iterate through argv and print every element in order, each on a
   // separate line
 
+  // Hint: store argc in x19 and argv in x20 (because calling printf
+  // will overwrite x0 & x1, you need to keep these values safe in a
+  // *saved register*). Loop until x19 becomes 0, and keep advancing
+  // argv to the next C-string.
 
   // return 0
   mov w0, #0
