@@ -13,5 +13,5 @@ int countBits(unsigned int n) {
 }
 
 void setBit(unsigned int& n, int i) {
-  // FIXME: set the ith bit of the nubmer n to 1
+  // FIXME: set the ith bit of the number n to 1
 }
