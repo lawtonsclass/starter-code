@@ -56,6 +56,7 @@ void counterTestReset() {
 
 void counterTestGetCount() {
   Counter c;
+  Counter_construct(&c, 0);
   Counter_reset(&c, 42);
   Counter_inc(&c);
   assertTrue(Counter_getCount(&c) == 43, "getCount");
