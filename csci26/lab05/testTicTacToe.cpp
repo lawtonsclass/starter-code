@@ -81,13 +81,13 @@ void SimpleTests::testWinner(GameTree& t) {
   bool is_correct = true;
 
   Board b1 = {{'-', 'O', 'X'}, {'O', 'X', 'O'}, {'X', 'O', '-'}};
-  is_correct = t.winner(b1) == 'X' ? true : false;
+  if (t.winner(b1) != 'X') is_correct = false;
 
-  Board b2 = {{'-', 'X', 'O'}, {'X', 'X', 'O'}, {'-', 'X', 'O'}};
-  is_correct = t.winner(b2) == 'O' ? true : false;
+  Board b2 = {{'X', '-', 'O'}, {'X', 'X', 'O'}, {'-', 'X', 'O'}};
+  if (t.winner(b2) != 'O') is_correct = false;
 
   Board b3 = {{'X', 'O', '-'}, {'-', '-', 'X'}, {'O', '-', '-'}};
-  is_correct = t.winner(b3) == '?' ? true : false;
+  if (t.winner(b3) != '?') is_correct = false;
 
   assertTrue(is_correct, "testWinner");
 }
