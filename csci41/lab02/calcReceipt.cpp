@@ -26,8 +26,8 @@ int main(int argc, char *argv[]) {
   // finally the total. Prices should be displayed with dollar signs
   // and cents.
 
-  // Hint: when printing out prices, use setw(2) and setfill('0') to
-  // guarantee you output the cents correctly
+  // Hint: using setw(2) and setfill('0') is one way to output the
+  // cents correctly
 
   return 0;
 }
